@@ -257,6 +257,8 @@ public class VolumeDialogImpl implements VolumeDialog,
     private final List<MediaOutputRow> mMediaOutputRows = new ArrayList<>();
     private final List<MediaDevice> mMediaDevices = new ArrayList<>();
 
+    private boolean mHasAlertSlider;
+
     public VolumeDialogImpl(Context context) {
         mContext =
                 new ContextThemeWrapper(context, R.style.qs_theme);
@@ -281,6 +283,7 @@ public class VolumeDialogImpl implements VolumeDialog,
                 mLocalMediaManager.registerCallback(VolumeDialogImpl.this);
             }
         }, 3000);
+        mHasAlertSlider = mContext.getResources().getBoolean(com.android.internal.R.bool.config_hasAlertSlider);
     }
 
     @Override
@@ -486,6 +489,10 @@ public class VolumeDialogImpl implements VolumeDialog,
         mMediaButton = mDialog.findViewById(R.id.media_button);
         mMediaTitleText = mDialog.findViewById(R.id.media_output_title);
         mExpandRows.setOnLongClickListener(this);
+
+        if (mHasAlertSlider) {
+            mRinger.setVisibility(View.GONE);
+        }
 
         if (mRows.isEmpty()) {
             if (!AudioSystem.isSingleVolume(mContext)) {
