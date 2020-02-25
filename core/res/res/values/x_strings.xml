@@ -83,4 +83,9 @@
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay changed to night mode.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay changed to outdoor mode.</string>
 
+    <!-- Popup camera dialog -->
+    <string name="popup_camera_dialog_message">Do you want to raise the front facing camera?</string>
+    <string name="popup_camera_dialog_no">No</string>
+    <string name="popup_camera_dialog_raise">Yes</string>
+
 </resources>
