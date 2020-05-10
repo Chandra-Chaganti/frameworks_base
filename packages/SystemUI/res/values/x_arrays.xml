@@ -31,6 +31,9 @@
     <integer-array name="fod_animation_resources">
     </integer-array>
 
+    <integer-array name="fod_icon_resources">
+    </integer-array>
+
     <!-- Video quality entries, Hardcoded because it's pointless to translate them --> 
     <string-array name="screen_video_quality_entries" translatable="false"> 
         <item>20Mbps</item> 
