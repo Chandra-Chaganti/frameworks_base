@@ -6966,11 +6966,6 @@ public final class Settings {
          */
         public static final String LAST_PERFORMANCE_PROFILE= "last_performance_profile";
 
-        /**
-         * @hide
-         */
-        public static final String REFRESH_RATE_SETTING = "refresh_rate_setting";
-
        /**
         * Powermenu Background
         * @hide
